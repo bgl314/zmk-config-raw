@@ -10,6 +10,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"   
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse_settings.h>
+
+// Enable Mouse Keys
+#include "includes/mouse_keys.dtsi"
 
 
 #define COLEMAK   0
@@ -20,6 +25,7 @@
 #define SYMBOLS  5 
 #define NAV    6
 #define ADJUST 7
+#define TRACK 8
 
 #define QUICK_TAP_MS 175
 
@@ -132,7 +138,8 @@ ZMK_COMBO(scln_ent,  &scln_ret, RM4 RB4,     COLEMAK REAPER GAMES, COMBO_TERM_SL
 ZMK_COMBO(nav_ret,  &kp RET, RH0 RB4,     COLEMAK NUMBERS SYMBOLS NAV REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(nav_ret2,  &kp RET, RH0 RM4,    COLEMAK NUMBERS SYMBOLS NAV REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(bkspc_ret,  &kp RET, LH0 LM4,    COLEMAK REAPER GAMES, COMBO_TERM_SLOW)
-ZMK_COMBO(rh_adj,  &mo ADJUST, RH0 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
+ZMK_COMBO(rh_adj,  &mo ADJUST, RH2 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
+ZMK_COMBO(rh_adj,  &mo TRACK, RH0 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(lh_del,  &kp DEL, LH0 LH1,    COLEMAK NAV REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(cw_trigger,  &caps_word, RH1 RM1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
 
@@ -391,8 +398,6 @@ label= "12345"                                                 ;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
                 symbol_layer {
 // ┌───────────────────────────────────────────────────────────┐
 label= "!@#$%"                                                 ;
@@ -407,7 +412,6 @@ label= "!@#$%"                                                 ;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
                 nav_layer {
 // ┌───────────────────────────────────────────────────────────┐
 label= "NAV"                                                 ;
@@ -432,6 +436,21 @@ label= "ADJUST"                                                ;
 &trans &kp F5      &kp F6   &kp F7   &kp F8     &trans                      &trans    &hmr RSHFT C_PLAY &hmr RCTL C_STOP &hmr RALT C_PREV  &hmr RGUI C_NEXT  &trans  
 &trans &kp F1    &kp F2   &kp F3   &kp F4     &trans                        &trans    &kp C_VOL_DN &kp C_VOL_UP   &kp C_MUTE &trans    &trans 
                                          &trans    &trans    &trans                &trans    &trans    &trans    
+                        >;
+                };
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                tp_layer {
+// ┌───────────────────────────────────────────────────────────┐
+label= "TRACK"                                                  ;
+// └───────────────────────────────────────────────────────────┘
+
+ bindings = <
+ //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
+&none &none   &none   &none    &none    &none                    &none     &none     U_MSS_TP_S_D             U_MSS_TP_S_I             U_MSS_TP_PT_I &none 
+&none &none   U_BTN1  U_BTN2   U_BTN3    &kp DEL                  &none    &none     U_MSS_TP_NI_D            U_MSS_TP_NI_I            U_MSS_TP_PT_D &none 
+&none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &none               &none     &none     U_MSS_TP_V6_D            U_MSS_TP_V6_I   &none &none 
+                            &kp LALT   &kp LSHFT   &kp LCTL                 &trans   &trans &trans    
                         >;
                 };
         };
