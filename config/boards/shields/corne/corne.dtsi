@@ -89,8 +89,8 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
         compatible = "gpio-ps2";
 
         // The two bottom left pins of the nice!nano (when it is facing down)
-        scl-gpios = <&pro_micro 16 0>;
-        sda-gpios = <&pro_micro 10 0>;
+        scl-gpios = <&pro_micro 3 0>;
+        sda-gpios = <&pro_micro 2 0>;
     };
 };
 
