@@ -139,7 +139,7 @@ ZMK_COMBO(nav_ret,  &kp RET, RH0 RB4,     COLEMAK NUMBERS SYMBOLS NAV REAPER GAM
 ZMK_COMBO(nav_ret2,  &kp RET, RH0 RM4,    COLEMAK NUMBERS SYMBOLS NAV REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(bkspc_ret,  &kp RET, LH0 LM4,    COLEMAK REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(rh_adj,  &mo ADJUST, RH2 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
-//ZMK_COMBO(rh_track,  &mo TRACK, RH0 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
+ZMK_COMBO(rh_track,  &mo TRACK, RH0 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(lh_del,  &kp DEL, LH0 LH1,    COLEMAK NAV REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(cw_trigger,  &caps_word, RH1 RM1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
 
@@ -337,7 +337,7 @@ label= "CMAK"                                                  ;
     &trans &kp Q     &kp W     &kp F     &kp P     &kp G                &kp J     &kp L     &kp U     &kp Y     &kp SQT   &trans   
     &trans &hml LGUI A &hml LALT  R   &hml LCTL S  &hml LSHFT T &kp D   &kp H  &hmr RSHFT N &hmr RCTL E  &hmr RALT I  &hmr RGUI O   &trans   
     &trans &z_ret     &kp X     &kp C     &kp V     &kp B                &kp K     &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans 
-                        &hhm LALT ESC   &lt NUMBERS TAB   &hhm LCTRL BKSP      &tm TRACK SPC  &sk RSHFT &mo SYMBOLS
+                        &hhm LALT ESC   &lt NUMBERS TAB   &hhm LCTRL BKSP      &tm NAV SPC  &sk RSHFT &mo SYMBOLS
                         >;
                 };
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
