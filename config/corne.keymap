@@ -138,8 +138,8 @@ ZMK_COMBO(scln_ent,  &scln_ret, RM4 RB4,     COLEMAK REAPER GAMES, COMBO_TERM_SL
 ZMK_COMBO(nav_ret,  &kp RET, RH0 RB4,     COLEMAK NUMBERS SYMBOLS NAV REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(nav_ret2,  &kp RET, RH0 RM4,    COLEMAK NUMBERS SYMBOLS NAV REAPER GAMES, COMBO_TERM_SLOW)
 ZMK_COMBO(bkspc_ret,  &kp RET, LH0 LM4,    COLEMAK REAPER GAMES, COMBO_TERM_SLOW)
-ZMK_COMBO(rh_adj,  &mo ADJUST, RH2 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
-ZMK_COMBO(rh_track,  &mo TRACK, RH0 RH1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
+ZMK_COMBO(rh_adj,  &mo ADJUST, RH2 RH1,    COLEMAK SYMBOLS REAPER GAMES, COMBO_TERM_FAST)
+ZMK_COMBO(rh_track,  &mo TRACK, RH0 RH1,    COLEMAK NAV REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(lh_del,  &kp DEL, LH0 LH1,    COLEMAK NAV REAPER GAMES, COMBO_TERM_FAST)
 ZMK_COMBO(cw_trigger,  &caps_word, RH1 RM1,    COLEMAK REAPER GAMES, COMBO_TERM_FAST)
 
@@ -442,7 +442,7 @@ label= "ADJUST"                                                ;
 
                 track_layer {
 // ┌───────────────────────────────────────────────────────────┐
-label= "TRACK"                                                  ;
+label= "TRACK"                                    ;
 // └───────────────────────────────────────────────────────────┘
 
  bindings = <
